@@ -1,6 +1,6 @@
 {
   "name": "@constack/widemapp-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Widemapp CLI",
   "author": "Constack L.L.C",
   "scripts": {
