@@ -49,7 +49,7 @@ type PlanApisModel = {
     id: string;
     name: string;
     endpoint: string;
-    entityId: string;
+    entity: EntityModel;
     method: MethodModel;
     groupName: string;
     apiRequests: ApiRequestsModel[];

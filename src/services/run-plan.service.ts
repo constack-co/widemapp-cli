@@ -56,7 +56,7 @@ export class RunPlanService {
                         treeView: response
                     });
                     this.exportChildsOfGroup({
-                        groupId:  groupToGenerate.id,
+                        groupId: groupToGenerate.id,
                         childrens: response[0].children,
                         generationTypeValue: groupToGenerate.generationType.value,
                         planApiId: planApi.id});
@@ -156,7 +156,7 @@ export class RunPlanService {
                 file.templateId = itemChild.templateId;
                 file.path = this.findPath(itemChild.id, this.treeViewsOfGroup.find(x => x.groupId == input.groupId)?.treeView ?? []);
 
-                const isGroupId = this.childsOfGroups?.find((x: any) => x.groupId == input.groupId);
+                const isGroupId = this.childsOfGroups?.find((x) => x.groupId == input.groupId && x.planApiId == input.planApiId);
                 if (typeof isGroupId === 'undefined') {
                     this.childsOfGroups.push({
                         planApiId: input.planApiId,
