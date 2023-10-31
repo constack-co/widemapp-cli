@@ -1,4 +1,4 @@
-import BaseService from "../base/base.service";
+import BaseService from '../base/base.service';
 
 interface IGetTreeViewByGroupIdResponse {
     id: string,
@@ -26,9 +26,9 @@ interface IGetTreeViewByGroupIdRequest {
 }
 
 class GetTreeViewByGroupIdService extends BaseService<IGetTreeViewByGroupIdRequest, IGetTreeViewByGroupIdResponse[]>{
-    public async RequestAsync(params?: IGetTreeViewByGroupIdRequest): Promise<any> {
-        return await this.SendParam("GET", "api/templates/tree-view/group", {params});
+    public async requestAsync(params?: IGetTreeViewByGroupIdRequest): Promise<any> {
+        return await this.sendParam('GET', 'api/templates/tree-view/group', { params });
     }
 }
 
-export { GetTreeViewByGroupIdService, IGetTreeViewByGroupIdRequest, IGetTreeViewByGroupIdResponse, FileEditResponse}; 
+export { GetTreeViewByGroupIdService, IGetTreeViewByGroupIdRequest, IGetTreeViewByGroupIdResponse, FileEditResponse};

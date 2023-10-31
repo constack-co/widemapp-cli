@@ -8,9 +8,9 @@ type GetPlansApiResponse = {
 }
 
 class GetPlansApiService extends BaseService<GetPlansApiRequest, GetPlansApiResponse[]>{
-    public async RequestAsync(params?: GetPlansApiRequest): Promise<any> {
-        return await this.SendParam("GET", "api/plans", {params});
+    public async requestAsync(params?: GetPlansApiRequest): Promise<any> {
+        return await this.sendParam("GET", "api/plans", {params});
     }
 }
 
-export { GetPlansApiService, GetPlansApiRequest, GetPlansApiResponse }; 
+export { GetPlansApiService, GetPlansApiRequest, GetPlansApiResponse };

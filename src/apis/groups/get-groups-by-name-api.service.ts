@@ -16,9 +16,9 @@ type GenerationTypeModel = {
 }
 
 class GetGroupsByNameApiService extends BaseService<GetGroupsByNameApiRequest, GetGroupsByNameApiResponse[]>{
-    public async RequestAsync(params?: GetGroupsByNameApiRequest): Promise<any> {
-        return await this.SendParam("GET", "api/groups/by-name", {params});
+    public async requestAsync(params?: GetGroupsByNameApiRequest): Promise<any> {
+        return await this.sendParam("GET", "api/groups/by-name", {params});
     }
 }
 
-export { GetGroupsByNameApiService, GetGroupsByNameApiRequest, GetGroupsByNameApiResponse }; 
+export { GetGroupsByNameApiService, GetGroupsByNameApiRequest, GetGroupsByNameApiResponse };

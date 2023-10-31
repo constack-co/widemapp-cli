@@ -12,14 +12,14 @@ interface ILoginRequest{
 }
 
 class LoginApiService extends BaseService<ILoginRequest, ILoginResponse>{
-    public async SendAsync(bodyData?: ILoginRequest): Promise<any>
+    public async sendAsync(bodyData?: ILoginRequest): Promise<any>
     {
         return new Promise(async (resolve,reject) => {
-            await this.SendBody("POST","api/account/login", {bodyData}).then((response) => {
+            await this.sendBody("POST","api/account/login", {bodyData}).then((response) => {
                 resolve(response);
             }).catch((error) => reject(error));
         });
-    } 
+    }
 }
 
 export {LoginApiService, ILoginRequest, ILoginResponse};

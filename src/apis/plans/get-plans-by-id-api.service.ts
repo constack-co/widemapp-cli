@@ -49,7 +49,7 @@ type PlanApisModel = {
     id: string;
     name: string;
     endpoint: string;
-    entity: EntityModel;
+    entityId: string;
     method: MethodModel;
     groupName: string;
     apiRequests: ApiRequestsModel[];
@@ -80,9 +80,9 @@ type GenerationTypesModel = {
 }
 
 class GetPlansByIdApiService extends BaseService<GetPlansByIdApiRequest, GetPlansByIdApiResponse>{
-    public async RequestAsync(params?: GetPlansByIdApiRequest): Promise<any> {
-        return await this.SendParam("GET", "api/plans/id", {params});
+    public async requestAsync(params?: GetPlansByIdApiRequest): Promise<any> {
+        return await this.sendParam("GET", "api/plans/id", {params});
     }
 }
 
-export { GetPlansByIdApiService, GetPlansByIdApiRequest, GetPlansByIdApiResponse }; 
+export { GetPlansByIdApiService, GetPlansByIdApiRequest, GetPlansByIdApiResponse };

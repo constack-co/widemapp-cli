@@ -15,20 +15,14 @@ export default class BaseService<TRequest, TResponse> {
     private accessToken: string = '';
 
     async getCredentials() {
-        let rootPath: any = await this.scriptService.run('echo %PATH%');
-        // if linux
-        if (rootPath == '%PATH%') {
-            rootPath = await this.scriptService.run('echo $PATH');
-        }
-        rootPath = rootPath.split(';')[0].replace('\\bin', '');
-        const resolvedPath = normalize(join(rootPath, '.widemapp/credentials.json'));
+        const resolvedPath = normalize(join(process.env.HOME ?? '', '.widemapp/credentials.json'));
         await fs.readFile(resolvedPath, 'utf-8').then(async (filedata) => {
             const token = JSON.parse(filedata).token;
             this.accessToken = token;
         }).catch(() => {});
     }
 
-    protected async SendBody(methodType: Method, url: string, options?: {bodyData?:TRequest}): Promise<any> {
+    protected async sendBody(methodType: Method, url: string, options?: {bodyData?:TRequest}): Promise<any> {
         if (this.cancelRequest != undefined) this.cancelRequest;
 
         let finalParams = {};
@@ -55,8 +49,8 @@ export default class BaseService<TRequest, TResponse> {
         });
     }
 
-    protected async SendParam<TRequest, TResponse>(methodType: Method, url: string, options?: {params?:TRequest}): Promise<any> {
-        
+    protected async sendParam<TRequest, TResponse>(methodType: Method, url: string, options?: {params?:TRequest}): Promise<any> {
+
         if (this.cancelRequest != undefined) this.cancelRequest;
 
         let finalParams = {};

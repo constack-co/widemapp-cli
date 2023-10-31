@@ -1,5 +1,5 @@
-import * as fs from 'fs/promises';
-import { join, normalize } from 'path';
+import * as fs from 'node:fs/promises';
+import { join, normalize } from 'node:path';
 import mkdirp from 'mkdirp';
 import { FileEditResponse } from '../apis/templates/get-tree-view-by-group-id.api.service';
 
@@ -9,7 +9,7 @@ export class FsService {
         fileName: string;
         contentAdd: string;
         fileEdits: FileEditResponse[];
-    }) {
+    }): Promise<any>  {
         const resolvedPath = normalize(join(process.cwd(), data.path));
         const completedPath = normalize(join(resolvedPath, data.fileName));
 
@@ -17,17 +17,17 @@ export class FsService {
             await fs.access(completedPath).then(async() => {
                 for (const fileEdit of data.fileEdits) {
                     await fs.readFile(completedPath, 'utf-8').then(async (filedata) => {
-                        filedata = filedata.replace(fileEdit.placeholder, fileEdit.content);
+                        filedata = filedata?.replace(fileEdit.placeholder, fileEdit.content);
                         await fs.writeFile(completedPath, filedata)
-                        .then(() => {})
-                        .catch(error => console.log(error));
+                            .then(() => {})
+                            .catch(error => console.log(error));
                     });
                 }
             }).catch(async () => {
                 await fs.writeFile(completedPath, data.contentAdd)
-                .then(() => {})
-                .catch(error => console.log(error));
-            })
+                    .then(() => {})
+                    .catch(error => console.log(error));
+            });
         });
     }
 
@@ -35,20 +35,20 @@ export class FsService {
         path: string;
         fileName: string;
         fileEdits: FileEditResponse[];
-    }) {
+    }) : Promise<any> {
         const completedPath = normalize(join(process.cwd(), data.path, data.fileName));
 
-        await fs.access(completedPath).then(async() => {
+        await fs.access(completedPath).then(async () => {
             for (const fileEdit of data.fileEdits) {
                 await fs.readFile(completedPath, 'utf-8').then(async (filedata) => {
                     filedata = filedata.replace(fileEdit.placeholder, fileEdit.content);
                     await fs.writeFile(completedPath, filedata)
-                    .then(() => {})
-                    .catch(error => console.log(error));
+                        .then(() => {})
+                        .catch(error => console.log(error));
                 });
             }
         }).catch(async () => {
             console.log(`${completedPath} should edit, but can't be found!`)
-        })
+        });
     }
 }
