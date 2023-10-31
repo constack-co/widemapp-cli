@@ -9,21 +9,15 @@ export class LoginService {
     private scriptService = new ScriptService();
     private credentials: {
         token?: string
-    } = { token: undefined }; 
+    } = { token: undefined };
 
     async handle(data: {username: string, password: string}) {
-        await this.loginApiService.SendAsync({
-            emailOrUsername: data.username, 
+        await this.loginApiService.sendAsync({
+            emailOrUsername: data.username,
             password: data.password
         }).then(async (response) => {
             this.credentials.token = response['token'];
-            let rootPath: any = await this.scriptService.run('echo %PATH%');
-            // if linux
-            if (rootPath == '%PATH%') {
-                rootPath = await this.scriptService.run('echo $PATH');
-            }
-            rootPath = rootPath.split(';')[0].replace('\\bin', '');
-            const resolvedPath = normalize(join(rootPath, '.widemapp'));
+            const resolvedPath = normalize(join(process.env.HOME ?? '', '.widemapp'));
 
             await this.fixPathToCredencials(resolvedPath);
             console.log('Login Succeeded');

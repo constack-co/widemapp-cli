@@ -5,7 +5,7 @@ export class FetchPlansService {
     public plans: GetPlansApiResponse[] = [];
 
     async handle() {
-        await this.getPlansApiService.RequestAsync().then((response: GetPlansApiResponse[]) => {
+        await this.getPlansApiService.requestAsync().then((response: GetPlansApiResponse[]) => {
             this.plans = response;
         })
         return this.plans;
