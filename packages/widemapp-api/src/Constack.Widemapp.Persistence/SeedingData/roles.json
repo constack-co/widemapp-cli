@@ -1,0 +1,12 @@
+﻿[
+  {
+    "Id": "ad96c0d3-db72-4bf1-8924-88c14ae00ea0",
+    "Name": "Administrator",
+    "NormalizedName": "ADMINISTRATOR"
+  },
+  {
+    "Id": "0fb51d36-edcb-4a84-a131-7f55b901d3c8",
+    "Name": "Employee",
+    "NormalizedName": "EMPLOYEE"
+  }
+]

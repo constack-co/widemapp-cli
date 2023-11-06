@@ -1,0 +1,12 @@
+﻿[
+  {
+    "Id": "5e532578-f07c-4ba3-9ac6-c4ef664b2085",
+    "Name": "Front-End",
+    "Value": "FRONT_END"
+  },
+  {
+    "Id": "3898f5b4-8850-495c-a527-f9e87a354dab",
+    "Name": "Back-End",
+    "Value": "BACK_END"
+  }
+]

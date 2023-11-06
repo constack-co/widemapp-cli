@@ -1,0 +1,22 @@
+﻿[
+  {
+    "Id": "ec0f4dff-3d31-443e-bbfd-244751b94e3c",
+    "Name": "GET"
+  },
+  {
+    "Id": "bbe4915f-76d5-453f-bf75-0961353ed714",
+    "Name": "POST"
+  },
+  {
+    "Id": "45895712-87d0-48ad-94d5-54771bd90f81",
+    "Name": "PUT"
+  },
+  {
+    "Id": "ed3e670c-fdc8-4369-83b0-26b3c75e74a5",
+    "Name": "PATCH"
+  },
+  {
+    "Id": "54bf848a-4653-4905-9a7c-6c9af0fc3f17",
+    "Name": "DELETE"
+  }
+]

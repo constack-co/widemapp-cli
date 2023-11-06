@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "noImplicitAny": false,
+    "allowJs": true,
+    "types": [
+      "webpack-env",
+      "vuetify"
+    ],
+    "paths": {
+      "@Auth/*": [
+        "src/views/auth/*",
+      ],
+      "@Guest/*": [
+        "src/views/guest/*",
+      ],
+      "@Services/*":[
+        "src/services/*"
+      ],
+      "@Common/*":[
+        "src/common/*"
+      ],
+      "@Mixin/*": [
+        "src/common/mixins/*",
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx", "src/plugins/vuetify.ts", "src/plugins/notifier.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
