@@ -1,0 +1,12 @@
+﻿[
+  {
+    "Id": "2743525c-7058-4ea6-aed1-9fe37a35e0a2",
+    "Name": "One To Many",
+    "Value": "OTM"
+  },
+  {
+    "Id": "fd3911f5-d426-4968-b069-3269c3adf0aa",
+    "Name": "Many to One",
+    "Value": "MTO"
+  }
+]

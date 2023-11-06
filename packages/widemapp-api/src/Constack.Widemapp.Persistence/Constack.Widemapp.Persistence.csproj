@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SeedingData\generation-types.json" />
+    <None Remove="SeedingData\method-types.json" />
+    <None Remove="SeedingData\property-types.json" />
+    <None Remove="SeedingData\relation-types.json" />
+    <None Remove="SeedingData\roles.json" />
+    <None Remove="SeedingData\user-roles.json" />
+    <None Remove="SeedingData\users.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SeedingData\method-types.json" />
+    <EmbeddedResource Include="SeedingData\generation-types.json" />
+    <EmbeddedResource Include="SeedingData\property-types.json" />
+    <EmbeddedResource Include="SeedingData\relation-types.json" />
+    <EmbeddedResource Include="SeedingData\roles.json" />
+    <EmbeddedResource Include="SeedingData\user-roles.json" />
+    <EmbeddedResource Include="SeedingData\users.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Constack.Widemapp.Application\Constack.Widemapp.Application.csproj" />
+    <ProjectReference Include="..\Constack.Widemapp.Domain\Constack.Widemapp.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>

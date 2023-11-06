@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constack.Widemapp.Api", "src\Constack.Widemapp.Api\Constack.Widemapp.Api.csproj", "{2ADB479B-EABA-46A1-B39F-7E346975C855}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constack.Widemapp.Domain", "src\Constack.Widemapp.Domain\Constack.Widemapp.Domain.csproj", "{7EB20052-1E2E-4572-8D10-359998820958}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constack.Widemapp.Persistence", "src\Constack.Widemapp.Persistence\Constack.Widemapp.Persistence.csproj", "{96B8A22A-130E-4499-85B6-4A6B067DE0AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constack.Widemapp.Application", "src\Constack.Widemapp.Application\Constack.Widemapp.Application.csproj", "{7195DD3B-368B-4D4E-B197-850354940DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constack.Widemapp.Common", "src\Constack.Widemapp.Common\Constack.Widemapp.Common.csproj", "{A30951E2-80AE-4714-9B13-6C071B25937B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ADB479B-EABA-46A1-B39F-7E346975C855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADB479B-EABA-46A1-B39F-7E346975C855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADB479B-EABA-46A1-B39F-7E346975C855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADB479B-EABA-46A1-B39F-7E346975C855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB20052-1E2E-4572-8D10-359998820958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB20052-1E2E-4572-8D10-359998820958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB20052-1E2E-4572-8D10-359998820958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB20052-1E2E-4572-8D10-359998820958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B8A22A-130E-4499-85B6-4A6B067DE0AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B8A22A-130E-4499-85B6-4A6B067DE0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B8A22A-130E-4499-85B6-4A6B067DE0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B8A22A-130E-4499-85B6-4A6B067DE0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7195DD3B-368B-4D4E-B197-850354940DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7195DD3B-368B-4D4E-B197-850354940DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7195DD3B-368B-4D4E-B197-850354940DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7195DD3B-368B-4D4E-B197-850354940DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A30951E2-80AE-4714-9B13-6C071B25937B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30951E2-80AE-4714-9B13-6C071B25937B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30951E2-80AE-4714-9B13-6C071B25937B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30951E2-80AE-4714-9B13-6C071B25937B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C21B08A1-B6A2-46FB-B19D-8A8D3918FA98}
+	EndGlobalSection
+EndGlobal
